@@ -40,7 +40,7 @@ const StatsSection = (props) => {
     },
   ];
   return (
-    <div className="row py-3 pe-3 mx-4 ms-auto">
+    <div className="row py-0 pe-3 mx-4 ms-auto">
       {statsCards.map((card) => (
         <StatsCard key={card.id} statsCard={card}></StatsCard>
       ))}

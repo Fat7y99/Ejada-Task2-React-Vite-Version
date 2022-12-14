@@ -112,7 +112,9 @@
   color: white;
   font-weight: 700;
   position: relative;
-  top: 30%;
+  top: 90px;
+  /* height: 100px; */
+  /* background-color: red; */
 }
 .pie-title {
   color: black;
@@ -154,7 +156,9 @@
 #fourth-pie {
   stroke-dasharray: 4.75 18 19;
 }
-
+.chart-card {
+  height: 20%;
+}
 @media screen and (max-width: 991px) {
   .chart-card {
     padding: 1rem;

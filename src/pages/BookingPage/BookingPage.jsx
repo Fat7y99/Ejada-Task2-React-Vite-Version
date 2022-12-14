@@ -1,4 +1,4 @@
-import "./BookingPage.css";
+import "./BookingPage.scss";
 import FiltrationSction from "../../components/BookingComponents/FiltrationSection";
 import CarsSection from "../../components/BookingComponents/CarsSection";
 const BookingPage = () => {

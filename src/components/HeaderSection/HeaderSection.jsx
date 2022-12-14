@@ -1,4 +1,4 @@
-import "./HeaderSection.css";
+import "./HeaderSection.scss";
 import Avatar from "../../assets/imgs/avatar.png";
 import SearchIcon from "../../assets/imgs/search icon.svg";
 import Notification from "../../assets/imgs/notification.svg";

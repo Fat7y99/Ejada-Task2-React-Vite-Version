@@ -1,5 +1,5 @@
-import SideBar from "./Components/UI/SideBarSection/SideBar";
-import BodyContent from "./Components/UI/BodyContent";
+import SideBar from "./Components/SideBarSection/SideBar";
+import BodyContent from "./BodyContent";
 import "@fontsource/dm-sans";
 import React from "react";
 function App() {

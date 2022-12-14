@@ -6,10 +6,7 @@ const StatsCard = (props) => {
           props.statsCard.id === "first-pie" ? "start" : ""
         } `}
       >
-        <img
-          src={process.env.PUBLIC_URL + `imgs/${props.statsCard.iconPath}.svg`}
-          alt=""
-        />
+        <img src={props.statsCard.iconPath} alt="" />
         <div
           className={`pie-title ${
             props.statsCard.id === "first-pie" ? "first-pie-title" : ""

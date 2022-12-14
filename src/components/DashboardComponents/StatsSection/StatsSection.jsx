@@ -1,5 +1,9 @@
 import StatsCard from "./StatsCard";
-import "./StatsSection.css";
+import firstPie from "../../../assets/imgs/first-pie.svg";
+import secondPie from "../../../assets/imgs/second-pie.svg";
+import thirdPie from "../../../assets/imgs/third-pie.svg";
+import fourthPie from "../../../assets/imgs/fourth-pie.svg";
+
 const StatsSection = (props) => {
   const statsCards = [
     {
@@ -8,7 +12,7 @@ const StatsSection = (props) => {
       percentage: "45%",
       firstColor: "#B37EFC",
       secondColor: "#FFFFFF",
-      iconPath: "first-pie",
+      iconPath: firstPie,
     },
     {
       id: "second-pie",
@@ -16,7 +20,7 @@ const StatsSection = (props) => {
       percentage: "50%",
       firstColor: "#E8F6FD",
       secondColor: "#FF7E86",
-      iconPath: "second-pie",
+      iconPath: secondPie,
     },
     {
       id: "third-pie",
@@ -24,7 +28,7 @@ const StatsSection = (props) => {
       percentage: "9%",
       firstColor: "#E8F6FD",
       secondColor: "#A162F7",
-      iconPath: "third-pie",
+      iconPath: thirdPie,
     },
     {
       id: "fourth-pie",
@@ -32,7 +36,7 @@ const StatsSection = (props) => {
       percentage: "25%",
       firstColor: "#E8F6FD",
       secondColor: "#F6CC0D",
-      iconPath: "fourth-pie",
+      iconPath: fourthPie,
     },
   ];
   return (

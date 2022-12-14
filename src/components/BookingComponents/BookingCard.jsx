@@ -1,4 +1,13 @@
+import car1 from "../../assets/imgs/booking-car-1.svg";
+import car2 from "../../assets/imgs/booking-car-2.svg";
+import car3 from "../../assets/imgs/booking-car-3.svg";
+import car4 from "../../assets/imgs/booking-car-4.svg";
+import car5 from "../../assets/imgs/booking-car-5.svg";
+import icon1 from "../../assets/imgs/booking-icon-1.svg";
+import icon2 from "../../assets/imgs/booking-icon-2.svg";
+
 const BookingCard = (props) => {
+  const CarImages = [car1, car2, car3, car4, car5];
   return (
     <div className="col-lg-4">
       <div className="col py-4">
@@ -40,16 +49,16 @@ const BookingCard = (props) => {
             <div className="Coupe text-black-50 pb-2">Coupe</div>
             <img
               className="car px-0"
-              src={`imgs/booking-car-${props.carID}.svg`}
+              src={CarImages[props.carID - 1]}
               alt={`car${props.carID}`}
             />
           </div>
           <div className="d-inline-block position-relative py-3 px-3">
-            <img src={`imgs/booking-icon-1.svg`} alt="icon1" />
+            <img src={icon1} alt="icon1" />
             <div className="d-inline-block px-1 pe-3 car-price text-black-50">
               4
             </div>
-            <img className="pe-1" src="imgs/booking-icon-2.svg" alt="icon2" />
+            <img className="pe-1" src={icon2} alt="icon2" />
             <div className="text-black-50 d-inline">Manual</div>
             <div className="d-inline-block car-price end-0 pe-2 position-absolute text-black-50">
               $400/d

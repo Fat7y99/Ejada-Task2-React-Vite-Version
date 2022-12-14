@@ -59,11 +59,13 @@ h3 {
 /* } */
 
 #body-content {
-  overflow-y: scroll;
-
   /* height: 105vh; */
   background-color: #f3f5f8;
 }
 .search-header {
+  position: -webkit-sticky; /* Safari & IE */
+  position: sticky;
+  z-index: 1;
+
   background-color: white;
 }

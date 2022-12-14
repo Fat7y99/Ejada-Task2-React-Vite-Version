@@ -1,0 +1,162 @@
+/* CarsSection Part */
+#card1 {
+  background-color: #e1dfa4;
+}
+
+#card2 {
+  background-color: #e3ecf1;
+}
+#card3 {
+  background-color: #f4e3e5;
+}
+.car {
+  height: 156px;
+  width: 90%;
+}
+
+.card-text {
+  font-size: 18px;
+  font-weight: 700;
+}
+.car-price {
+  font-size: 14px;
+  font-weight: 500;
+}
+@media screen and (max-width: 991px) {
+  .car-card {
+    padding: 1rem;
+  }
+}
+
+/* ChartsSection Part */
+
+#bardiv {
+  width: 100%;
+  background-color: white;
+  height: 500px;
+}
+
+#graph-div {
+  width: 100%;
+  height: 500px;
+  background-color: white;
+}
+.stat-box {
+  background-color: white;
+  margin: 1rem;
+  padding: 1rem 2rem;
+  border-radius: 14px;
+}
+.miles {
+  width: 75px;
+  /* background-color: #2884ff; */
+  position: relative;
+  font-weight: 700;
+  top: 30px;
+  left: 85%;
+}
+.stats a,
+.car-stats a {
+  text-decoration: none;
+  color: black;
+}
+
+.ul-div {
+  background-color: #f5f4f6;
+  width: 35%;
+  font-size: 10px;
+  font-weight: 700;
+  border-radius: 10px;
+
+  padding: 0.5rem 1rem;
+  position: relative;
+  top: 35;
+  left: 65%;
+}
+.ul-div li:hover {
+  padding: 0.5rem 0.75rem;
+  border-radius: 24px;
+  background-color: #ff764c;
+  color: white;
+}
+.ul-div li:hover > a {
+  color: white;
+}
+.stat-title {
+  font-size: 20px;
+}
+.stats li {
+  font-size: 10px;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 24px;
+  padding: 0.25rem 0.5rem;
+}
+.stats li:hover {
+  background-color: #2884ff;
+  color: white;
+}
+.stats li:hover > a {
+  color: white;
+}
+
+/* StatsSection Part */
+.pie-chart {
+  margin: 1rem;
+  width: 100%;
+  background-color: white;
+  height: 500px;
+}
+.percentage {
+  font-size: 24px;
+  color: white;
+  font-weight: 700;
+  position: relative;
+  top: 30%;
+}
+.pie-title {
+  color: black;
+  font-size: 24px;
+  font-weight: 700;
+
+  padding-top: 1rem;
+}
+.first-pie-title {
+  color: white;
+  padding-top: 1rem;
+  padding-bottom: 0rem;
+}
+.pie {
+  display: block;
+  width: 70%;
+  margin: 0 auto;
+}
+.start {
+  background-color: #a162f7;
+}
+.pie-chart {
+  padding: 1rem 2rem 2rem;
+  height: 100%;
+  border-radius: 14px;
+}
+.all-pie {
+  color: black;
+}
+#first-pie {
+  stroke-dasharray: 8.5 18 19;
+}
+#second-pie {
+  stroke-dasharray: 9.5 18 19;
+}
+#third-pie {
+  stroke-dasharray: 1.7 18 19;
+}
+#fourth-pie {
+  stroke-dasharray: 4.75 18 19;
+}
+
+@media screen and (max-width: 991px) {
+  .chart-card {
+    padding: 1rem;
+  }
+}

@@ -5,10 +5,13 @@
 
 .search-text {
   border: none;
-
   background-color: #f5f4f6;
 }
 
+.profile-header {
+  position: -webkit-sticky; /* Safari & IE */
+  position: sticky;
+}
 .profile-header > div {
   width: 358px;
 }

@@ -1,3 +1,6 @@
+import DashboardIcon from "../../assets/imgs/Dashboard.svg";
+import FilterIcon from "../../assets/imgs/filter.svg";
+
 const FiltrationSection = () => {
   return (
     <div className="container">
@@ -20,12 +23,12 @@ const FiltrationSection = () => {
         <div className="col-lg-2 filter-icons">
           <a href="#">
             <div id="filter-1" className="d-inline mx-3">
-              <img src="imgs/dashboard.svg" alt="" />
+              <img src={DashboardIcon} alt="" />
             </div>
           </a>
           <a href="#">
             <div id="filter-2" className="d-inline filter">
-              <img src="imgs/filter.svg" alt="" />
+              <img src={FilterIcon} alt="" />
             </div>
           </a>
         </div>

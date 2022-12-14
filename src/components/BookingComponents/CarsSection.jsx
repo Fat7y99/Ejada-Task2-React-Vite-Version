@@ -1,4 +1,3 @@
-import "./BookingScreen.css";
 import BookingCard from "./BookingCard";
 const CarsSection = (props) => {
   const CarsIDs = [1, 2, 3, 4, 5];

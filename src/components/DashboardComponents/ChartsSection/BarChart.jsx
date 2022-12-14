@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import * as am5xy from "@amcharts/amcharts5/xy";
-
+// import logo from
 import * as am5 from "@amcharts/amcharts5";
 import am5themes_Animated from "@amcharts/amcharts5/themes/Animated";
 
@@ -109,7 +109,7 @@ const barShow = (root) => {
 
   series.columns.template.setAll({
     tooltipHTML:
-      "<span style='font-size:10px; font-family: `DM Sans`; font-weight: 700; color:#FFFFFF;'><b>{hour}</b></span><br><img src='../imgs/tooltip-icon.svg' style='vertical-align:bottom; margin-bottom: 2px; margin-right: 5px; width:12px; height:12px;'><span style='font-size:10px; font-family: `DM Sans`; font-weight: 700; color:#FFFFFF;'><b>{valueY}</b></span>",
+      "<span style='font-size:10px; font-family: `DM Sans`; font-weight: 700; color:#FFFFFF;'><b>{hour}</b></span><br><img src='../../../../public/tooltip-icon.svg' style='vertical-align:bottom; margin-bottom: 2px; margin-right: 5px; width:12px; height:12px;'><span style='font-size:10px; font-family: `DM Sans`; font-weight: 700; color:#FFFFFF;'><b>{valueY}</b></span>",
   });
 
   // series.columns.template.tooltipHTML =

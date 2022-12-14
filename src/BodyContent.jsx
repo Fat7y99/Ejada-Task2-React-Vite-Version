@@ -6,7 +6,9 @@ import { Routes, Route } from "react-router-dom";
 const BodyContent = () => {
   return (
     <div id="body-content" className="col-lg-10 col-sm-9 col-md-11 px-0">
-      <HeaderSection></HeaderSection>
+      <header>
+        <HeaderSection></HeaderSection>
+      </header>
       <div>
         <Routes>
           <Route path="/" element={<DashboardPage />} />

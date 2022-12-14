@@ -12,6 +12,10 @@
 #body-content::-webkit-scrollbar {
   display: none;
 }
+#Booking-content {
+  height: 100%;
+  overflow: scroll;
+}
 
 .Booking-title {
   font-size: 30px;

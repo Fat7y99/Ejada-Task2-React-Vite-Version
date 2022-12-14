@@ -50,7 +50,7 @@ const SideBar = (props) => {
 
   return (
     <div className="col-lg-2 col-md-1 col-sm-2 px-0 position-relative">
-      <div className="side-bar screens-part px-3  text-black-50">
+      <div className="side-bar screens-part px-3 col-lg-2 bar text-black-50">
         <div className="px-3 py-4 logo-part">
           <img src={logo} alt="logo" />
         </div>
@@ -71,7 +71,7 @@ const SideBar = (props) => {
           ))}
         </ul>
       </div>
-      <div className="list-unstyled side-bar px-3  text-black-50  bottom-list">
+      <div className="list-unstyled side-bar px-3  text-black-50 col-lg-2  bottom-list">
         {BottomList.map((element) => (
           <Link
             to={`/${element.name}`}

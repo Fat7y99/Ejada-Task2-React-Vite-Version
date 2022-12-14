@@ -16,10 +16,6 @@ const graphShow = (root) => {
 
   root.setThemes([am5themes_Animated.new(root)]);
 
-  root.dateFormatter.setAll({
-    dateFormat: "yyyy-MM-dd",
-    dateFields: ["valueX"],
-  });
   var chart = root.container.children.push(am5xy.XYChart.new(root, {}));
 
   var cursor = chart.set(

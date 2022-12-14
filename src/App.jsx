@@ -5,9 +5,10 @@ import React from "react";
 function App() {
   return (
     <div>
-      <div className="main container-fluid">
-        <div className="row">
+      <div className=" container-fluid">
+        <div className="row position-relative">
           <SideBar></SideBar>
+
           <BodyContent></BodyContent>
         </div>
       </div>

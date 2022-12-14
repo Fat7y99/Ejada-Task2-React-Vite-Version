@@ -108,7 +108,7 @@ const graphShow = (root) => {
     return data;
   }
 
-  root.numberFormatter.set("durationFormat", "mm:ss a");
+  xAxis.get("dateFormats")["hour"] = "h a";
 
   var data = generateDatas(20);
 

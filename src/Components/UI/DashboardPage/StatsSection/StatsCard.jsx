@@ -7,7 +7,7 @@ const StatsCard = (props) => {
         } `}
       >
         <img
-          src={process.env.PUBLIC_URL + `/imgs/${props.statsCard.iconPath}.svg`}
+          src={process.env.PUBLIC_URL + `imgs/${props.statsCard.iconPath}.svg`}
           alt=""
         />
         <div

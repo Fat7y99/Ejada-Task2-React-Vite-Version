@@ -1,0 +1,41 @@
+.side-bar {
+  /* height: 120vh; */
+}
+.side-bar ul img {
+  padding-right: 0.75rem;
+}
+.side-bar a:hover:not(.active) {
+  background-color: #f3f5f8;
+  border-radius: 0.5rem;
+}
+.side-bar .active {
+  background-color: #f3f5f8;
+  border-radius: 0.5rem;
+}
+.screens-part {
+  height: 92%;
+}
+.bottom-list {
+  position: relative;
+}
+.side-bar a {
+  display: block;
+  color: black;
+  padding: 1rem 1.25rem;
+}
+.link-text {
+  display: inline;
+}
+
+@media screen and (max-width: 992px) and (min-width: 768px) {
+  .link-text {
+    /* display: none; */
+    font-size: 0.7rem;
+  }
+}
+
+@media screen and (max-width: 768px) and (min-width: 576px) {
+  .link-text {
+    display: none;
+  }
+}

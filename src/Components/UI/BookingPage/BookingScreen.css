@@ -1,0 +1,129 @@
+.car {
+  height: 156px;
+  width: 90%;
+}
+.love-icon {
+  position: absolute;
+  top: 10%;
+  left: 95%;
+  width: 1.6%;
+}
+
+#body-content::-webkit-scrollbar {
+  display: none;
+}
+
+.Booking-title {
+  font-size: 30px;
+  font-weight: 700;
+  padding: 2rem;
+}
+
+select {
+  background: white;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  background-image: url("../../../../public/imgs/arrow-down.svg");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  border-radius: 22.5px;
+  border: none;
+  /* text-indent: 5px; */
+
+  padding: 0.25rem 3.5rem 0.25rem 2rem;
+}
+
+option {
+  margin: 9px;
+  /* width: 160px; */
+}
+select:focus {
+  outline: none;
+}
+
+#filter-1 {
+  box-shadow: 0px 4px 8px 0px rgba(53, 53, 53, 0.1);
+  background-color: white;
+  border-radius: 30px;
+  padding: 10px;
+  display: inline-block;
+  align-self: flex-end;
+}
+#filter-2 {
+  display: inline-block;
+  align-self: flex-end;
+  box-shadow: 0px 4px 8px 0px rgba(53, 53, 53, 0.1);
+  background: #a162f7;
+  border-radius: 30px;
+
+  padding: 10px;
+}
+
+.love-icon > img {
+  color: red;
+  fill: red;
+}
+.card-text {
+  font-size: 1rem;
+  font-weight: 700;
+}
+.car-price {
+  font-size: 14px;
+  font-weight: 500;
+}
+.heart {
+  position: absolute;
+
+  right: 0px;
+
+  top: 0px;
+}
+
+.heartBtn {
+  position: absolute;
+
+  right: 0px;
+
+  top: 0px;
+}
+
+.heartBtn:hover {
+  fill: #f84f56;
+}
+
+.filter-icons {
+  position: sticky;
+  display: flex;
+  height: 100%;
+  left: 100%;
+  width: 15%;
+  /* width: 150px; */
+  /* background-color: #a162f7; */
+}
+.dropdowns {
+  display: flex;
+  height: 100%;
+  /* background-color: rebeccapurple; */
+}
+@media screen and (min-width: 992px) {
+  .drop-down {
+    /* background-color: #f84f56; */
+    /* width: 25%;*/
+    margin: 1.5rem;
+    display: inline-block;
+    align-self: flex-start;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .filter-icons {
+    width: 35%;
+    /* background-color: #f84f56; */
+  }
+  .drop-down {
+    width: 25%;
+    margin: 1rem;
+  }
+}

@@ -1,0 +1,36 @@
+.search-bar {
+  background-color: #f5f4f6;
+  border-radius: 0.5rem;
+}
+
+.search-text {
+  border: none;
+
+  background-color: #f5f4f6;
+}
+
+.profile-header > div {
+  width: 358px;
+}
+input:focus {
+  border: none;
+  outline: none;
+}
+/* .search-bar a::after {
+        content: " ";
+        width: px;
+        height: 22px;
+        margin: 0;
+        background-color: #ef9011;
+        position: sticky;
+        bottom: 20%;
+        left: 2%;
+        transform: translateY(-50%);
+      } */
+.profile-avatar {
+  position: sticky;
+  left: 88%;
+  /* bottom: 10%; */
+  top: 0%;
+  bottom: 0%;
+}

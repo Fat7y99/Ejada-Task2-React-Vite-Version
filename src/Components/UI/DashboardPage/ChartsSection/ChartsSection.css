@@ -1,0 +1,69 @@
+#bardiv {
+  width: 100%;
+  background-color: white;
+  height: 500px;
+}
+
+#graph-div {
+  width: 100%;
+  height: 500px;
+  background-color: white;
+}
+.stat-box {
+  background-color: white;
+  margin: 1rem;
+  padding: 1rem 2rem;
+  border-radius: 14px;
+}
+.miles {
+  width: 75px;
+  /* background-color: #2884ff; */
+  position: relative;
+  font-weight: 700;
+  top: 30px;
+  left: 85%;
+}
+.stats a,
+.car-stats a {
+  text-decoration: none;
+  color: black;
+}
+
+.ul-div {
+  background-color: #f5f4f6;
+  width: 35%;
+  font-size: 10px;
+  font-weight: 700;
+  border-radius: 10px;
+
+  padding: 0.5rem 1rem;
+  position: relative;
+  top: 35;
+  left: 65%;
+}
+.ul-div li:hover {
+  padding: 0.5rem 0.75rem;
+  border-radius: 24px;
+  background-color: #ff764c;
+  color: white;
+}
+.ul-div li:hover > a {
+  color: white;
+}
+.stat-title {
+  font-size: 20px;
+}
+.stats li {
+  font-size: 10px;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 24px;
+  padding: 0.25rem 0.5rem;
+}
+.stats li:hover {
+  background-color: #2884ff;
+  color: white;
+}
+.stats li:hover > a {
+  color: white;
+}

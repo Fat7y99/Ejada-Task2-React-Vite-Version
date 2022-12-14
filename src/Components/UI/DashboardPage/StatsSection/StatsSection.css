@@ -1,0 +1,59 @@
+.pie-chart {
+  margin: 1rem;
+  width: 100%;
+  background-color: white;
+  height: 500px;
+}
+.percentage {
+  font-size: 24px;
+  color: white;
+  font-weight: 700;
+  position: relative;
+  top: 30%;
+}
+.pie-title {
+  color: black;
+  font-size: 24px;
+  font-weight: 700;
+
+  padding-top: 1rem;
+}
+.first-pie-title {
+  color: white;
+  padding-top: 1rem;
+  padding-bottom: 0rem;
+}
+.pie {
+  display: block;
+  width: 70%;
+  margin: 0 auto;
+}
+.start {
+  background-color: #a162f7;
+}
+.pie-chart {
+  padding: 1rem 2rem 2rem;
+  height: 100%;
+  border-radius: 14px;
+}
+.all-pie {
+  color: black;
+}
+#first-pie {
+  stroke-dasharray: 8.5 18 19;
+}
+#second-pie {
+  stroke-dasharray: 9.5 18 19;
+}
+#third-pie {
+  stroke-dasharray: 1.7 18 19;
+}
+#fourth-pie {
+  stroke-dasharray: 4.75 18 19;
+}
+
+@media screen and (max-width: 991px) {
+  .chart-card {
+    padding: 1rem;
+  }
+}

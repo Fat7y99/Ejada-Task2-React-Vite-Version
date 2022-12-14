@@ -1,0 +1,31 @@
+{
+  "name": "ejada-task2-react-vite",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@amcharts/amcharts5": "^5.2.41",
+    "@fontsource/dm-sans": "^4.5.9",
+    "bootstrap": "^5.2.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.4.5",
+    "react-scripts": "^5.0.1",
+    "web-vitals": "^3.1.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.26",
+    "@types/react-dom": "^18.0.9",
+    "@vitejs/plugin-react-swc": "^3.0.0",
+    "react-error-overlay": "6.0.9",
+    "vite": "^4.0.1"
+  },
+  "resolutions": {
+    "react-scripts/**/react-error-overlay": "6.0.9"
+  }
+}

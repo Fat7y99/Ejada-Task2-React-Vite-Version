@@ -1,0 +1,28 @@
+#card1 {
+  background-color: #e1dfa4;
+}
+
+#card2 {
+  background-color: #e3ecf1;
+}
+#card3 {
+  background-color: #f4e3e5;
+}
+.car {
+  height: 156px;
+  width: 90%;
+}
+
+.card-text {
+  font-size: 18px;
+  font-weight: 700;
+}
+.car-price {
+  font-size: 14px;
+  font-weight: 500;
+}
+@media screen and (max-width: 991px) {
+  .car-card {
+    padding: 1rem;
+  }
+}

@@ -1,5 +1,5 @@
 import { initializeApp } from "firebase/app";
-import { getFirestore, collection, getDocs } from "firebase/firestore";
+import { getFirestore, collection, addDoc, getDocs } from "firebase/firestore";
 
 const firebaseConfig = {
   apiKey: "AIzaSyB1rqgLZ5bLV1-WPVDcCtHcLnSmhzV-PxY",
@@ -21,8 +21,8 @@ const db = getFirestore(app);
 const getNames = async () => {
   const usersCol = collection(db, "users");
 
+  addDoc(usersCol, { name: "sayed", age: 3 });
   const userSnapshot = await getDocs(usersCol);
-  // console.log(userSnapshot);
 
   userSnapshot.docs.map((doc) => console.log(doc.data()));
 };

@@ -29,7 +29,7 @@ select {
   -webkit-appearance: none;
   -moz-appearance: none;
 
-  background-image: url("../../../../public/arrow-down.svg");
+  background-image: url("/arrow-down.svg");
   background-repeat: no-repeat;
   background-position: right 1rem center;
   border-radius: 22.5px;
@@ -52,6 +52,7 @@ select:focus {
   background-color: white;
   border-radius: 30px;
   padding: 10px;
+
   display: inline-block;
   align-self: flex-end;
 }
@@ -103,8 +104,10 @@ select:focus {
   height: 100%;
   left: 100%;
   width: 15%;
+
+  padding: 1rem;
   /* width: 150px; */
-  /* background-color: #a162f7; */
+  // background-color: #a162f7;
 }
 .dropdowns {
   display: flex;

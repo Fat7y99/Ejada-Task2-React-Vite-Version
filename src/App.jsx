@@ -1,3 +1,5 @@
+import.meta.hot;
+
 import SideBar from "./Components/SideBarSection/SideBar";
 import BodyContent from "./BodyContent";
 import "@fontsource/dm-sans";

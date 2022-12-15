@@ -23,20 +23,6 @@ const SideBar = (props) => {
     { name: "Services", image: Services },
     { name: "Calendar", image: Calendar },
     { name: "Messages", image: Messages },
-  ];
-  const LinksImages = {
-    Dashboard: Dashboard,
-    Assets: Assets,
-    Booking: Booking,
-    "Sell Cars": SellCars,
-    "Buy Cars": BuyCars,
-    Services: Services,
-    Calendar: Calendar,
-    Messages: Messages,
-  };
-  console.log(LinksImages.Dashboard);
-
-  const BottomList = [
     { name: "settings", image: Settings },
     { name: "log out", image: LogOut },
   ];
@@ -49,30 +35,30 @@ const SideBar = (props) => {
   };
 
   return (
-    <div className="col-lg-2 col-md-1 col-sm-2 px-0   position-relative">
-      <div className="bar">
-        <div className="side-bar screens-part px-3  text-black-50 ">
-          <div className="px-3 py-4 logo-part">
-            <img src={logo} alt="logo" />
-          </div>
-          <ul className="list-unstyled">
-            {SideBarLinks.map((link) => (
-              <li key={link.name}>
-                <Link
-                  id={link.name}
-                  onClick={onClickHandler}
-                  className={` ${link.name === activeID ? "active" : ""} `}
-                  // href="#"
-                  to={`/${link.name === "Dashboard" ? "" : link.name}`}
-                >
-                  <img className="d-inline " src={link.image} alt="" />
-                  <div className="link-text  ">{link.name}</div>
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
-        {/* <div className="list-unstyled side-bar px-3  text-black-50  bottom-list">
+    <div className="col-lg-2 col-md-1 col-sm-2  bar ">
+      {/* <div className="bar"> */}
+      <div className="side-bar screens-part  text-black-50 ">
+        {/* <div className=" py-4 logo-part"> */}
+        <img className="logo" src={logo} alt="logo" />
+
+        <ul className="list-unstyled">
+          {SideBarLinks.map((link) => (
+            <li key={link.name}>
+              <Link
+                id={link.name}
+                onClick={onClickHandler}
+                className={`  ${link.name === activeID ? "active" : ""} `}
+                // href="#"
+                to={`/${link.name === "Dashboard" ? "" : link.name}`}
+              >
+                <img className="d-inline  mx-auto" src={link.image} alt="" />
+                <div className="link-text text-capitalize  ">{link.name}</div>
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </div>
+      {/* <div className="list-unstyled  side-bar  text-black-50  bottom-list">
         {BottomList.map((element) => (
           <Link
             to={`/${element.name}`}
@@ -84,7 +70,7 @@ const SideBar = (props) => {
           </Link>
         ))}
       </div> */}
-      </div>
+      {/* </div> */}
     </div>
   );
 };

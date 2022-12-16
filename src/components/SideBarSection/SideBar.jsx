@@ -12,6 +12,9 @@ import Calendar from "../../assets/imgs/Calendar.svg";
 import Messages from "../../assets/imgs/Messages.svg";
 import Settings from "../../assets/imgs/Settings.svg";
 import LogOut from "../../assets/imgs/log out.svg";
+import MobileSideBar from "../../assets/imgs/mobile-sidebar.png";
+
+import { useMediaQuery } from "react-responsive";
 
 const SideBar = (props) => {
   const SideBarLinks = [
@@ -28,49 +31,57 @@ const SideBar = (props) => {
   ];
 
   const [activeID, setActiveID] = useState("Dashboard");
-
+  const [isClicked, SetClick] = useState(false);
   const onClickHandler = (event) => {
     const id = event.currentTarget.id;
     setActiveID(id);
   };
 
+  const isMobile = useMediaQuery({ query: "(max-width: 576px)" });
+  console.log("isMobile?", isMobile);
+  const onIconClickHadler = () => {
+    console.log("sayed", isClicked);
+    SetClick(!isClicked);
+  };
+  const NormalSideBar = SideBarLinks.map((link) => (
+    <li key={link.name}>
+      <Link
+        id={link.name}
+        onClick={onClickHandler}
+        className={`  ${link.name === activeID ? "active" : ""} `}
+        to={`/${link.name === "Dashboard" ? "" : link.name}`}
+      >
+        <img className="d-inline  mx-auto" src={link.image} alt="" />
+        <div className="link-text text-capitalize  ">{link.name}</div>
+      </Link>
+    </li>
+  ));
+  const SideBarContent = isClicked && NormalSideBar;
   return (
     <div className="col-lg-2 col-md-1 col-sm-2  bar ">
-      {/* <div className="bar"> */}
       <div className="side-bar screens-part  text-black-50 ">
-        {/* <div className=" py-4 logo-part"> */}
         <img className="logo" src={logo} alt="logo" />
 
         <ul className="list-unstyled">
-          {SideBarLinks.map((link) => (
-            <li key={link.name}>
-              <Link
-                id={link.name}
-                onClick={onClickHandler}
-                className={`  ${link.name === activeID ? "active" : ""} `}
+          {isMobile && (
+            <li className="mobile-btn" key="0">
+              <a
+                id="0"
+                onClick={onIconClickHadler}
                 // href="#"
-                to={`/${link.name === "Dashboard" ? "" : link.name}`}
               >
-                <img className="d-inline  mx-auto" src={link.image} alt="" />
-                <div className="link-text text-capitalize  ">{link.name}</div>
-              </Link>
+                <img
+                  className="d-inline mx-auto"
+                  style={{ height: "50px" }}
+                  src={MobileSideBar}
+                  alt=""
+                />
+              </a>
             </li>
-          ))}
+          )}
+          {isMobile ? SideBarContent : NormalSideBar}
         </ul>
       </div>
-      {/* <div className="list-unstyled  side-bar  text-black-50  bottom-list">
-        {BottomList.map((element) => (
-          <Link
-            to={`/${element.name}`}
-            key={element.name}
-            className="text-capitalize"
-          >
-            <img className="pe-3" src={element.image} alt={element.name} />
-            <div className="link-text"> {element.name}</div>
-          </Link>
-        ))}
-      </div> */}
-      {/* </div> */}
     </div>
   );
 };

@@ -1,8 +1,14 @@
 .side-bar ul img {
   padding-right: 0.75rem;
 }
-
-.side-bar a:hover:not(.active) {
+.mobile-btn {
+  padding: 0rem;
+  margin: 0rem;
+  &:not(.active):hover {
+    background-color: white;
+  }
+}
+.side-bar Link:hover:not(.active) {
   background-color: #f3f5f8;
   border-radius: 0.5rem;
   color: #5f6165;

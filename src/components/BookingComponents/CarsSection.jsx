@@ -2,6 +2,7 @@ import BookingCard from "./BookingCard";
 import { useEffect } from "react";
 import { fetchCars } from "../../services/FireBase";
 import { useState } from "react";
+
 const CarsSection = () => {
   const [Cars, setCars] = useState([]);
 

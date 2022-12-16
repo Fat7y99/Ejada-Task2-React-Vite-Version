@@ -1,22 +1,16 @@
-import car1 from "../../assets/imgs/booking-car-1.svg";
-import car2 from "../../assets/imgs/booking-car-2.svg";
-import car3 from "../../assets/imgs/booking-car-3.svg";
-import car4 from "../../assets/imgs/booking-car-4.svg";
-import car5 from "../../assets/imgs/booking-car-5.svg";
 import icon1 from "../../assets/imgs/booking-icon-1.svg";
 import icon2 from "../../assets/imgs/booking-icon-2.svg";
 
 const BookingCard = (props) => {
-  const CarImages = [car1, car2, car3, car4, car5];
+  console.log(props.cars);
+  const Car = props.scar;
   return (
     <div className="col-lg-4">
       <div className="col py-4">
         <div className="card py-2 px-3" color="#E1DFA4">
           <div className="container my-4">
             <div className="s position-relative">
-              <div className="card-text d-inline-block">
-                Porshe 718 Cayman S
-              </div>
+              <div className="card-text d-inline-block">{Car.carName} </div>
               <div className="love-icon">
                 {/* <img src="imgs/love-0.svg" alt="love-0" /> */}
                 <span>
@@ -49,19 +43,21 @@ const BookingCard = (props) => {
             <div className="Coupe text-black-50 pb-2">Coupe</div>
             <img
               className="car px-0"
-              src={CarImages[props.carID - 1]}
+              src={Car.imageUrl}
+              // src={CarImages[props.carID - 1]}
+              // src="https://firebasestorage.googleapis.com/v0/b/car-dashboard-d6648.appspot.com/o/cars%2Fbooking-car-2.svg?alt=media&token=6dbcf5f4-38c4-41af-9783-e5cec9c95147"
               alt={`car${props.carID}`}
             />
           </div>
           <div className="d-inline-block position-relative py-3 px-3">
             <img src={icon1} alt="icon1" />
             <div className="d-inline-block px-1 pe-3 car-price text-black-50">
-              4
+              {Car.passenger}
             </div>
             <img className="pe-1" src={icon2} alt="icon2" />
-            <div className="text-black-50 d-inline">Manual</div>
+            <div className="text-black-50 d-inline">{Car.type}</div>
             <div className="d-inline-block car-price end-0 pe-2 position-absolute text-black-50">
-              $400/d
+              ${Car.pricePerDay}/d
             </div>
           </div>
         </div>

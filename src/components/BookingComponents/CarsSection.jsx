@@ -1,17 +1,29 @@
 import BookingCard from "./BookingCard";
 import { useEffect } from "react";
-const CarsSection = (props) => {
-  const CarsIDs = [1, 2, 3, 4, 5];
+import { fetchCars } from "../../services/FireBase";
+import { useState } from "react";
+const CarsSection = () => {
+  const [Cars, setCars] = useState([]);
+
+  const getCars = async () => {
+    const cars = await fetchCars();
+    setCars(cars);
+    return cars;
+  };
+
+  useEffect(() => {
+    // addCarsData();
+    getCars();
+  }, []);
 
   return (
     <div className="container">
       <div className="row ms-auto">
-        {CarsIDs.map((id) => (
-          <BookingCard carID={id} key={id}></BookingCard>
-        ))}{" "}
-        {CarsIDs.map((id) => (
-          <BookingCard carID={id} key={id}></BookingCard>
-        ))}{" "}
+        {Cars.length === 0
+          ? ""
+          : Cars.map((car) => (
+              <BookingCard carID={1} scar={car} key={0}></BookingCard>
+            ))}
       </div>{" "}
     </div>
   );

@@ -66,24 +66,19 @@ export const addCarsData = async () => {
   const carsCollection = collection(db, "cars");
   Cars.map((car) => addDoc(carsCollection, car));
 };
+
 export const fetchCars = async () => {
   const carsCollection = collection(db, "cars");
   const carsData = await getDocs(carsCollection);
-  // cars.map((car) => addDoc(carsCollection, car));
   const Cars = [];
   carsData.docs.map((car) => {
-    // console.log(car.data());
-    Cars.push(car.data());
+    Cars.push({ carId: car.id, ...car.data() });
   });
   // console.log(Cars);
   return Cars;
 };
 
-// const getNames = async () => {
-//   const usersCol = collection(db, "users");
-
-//   // addDoc(usersCol, { name: "sayed", age: 3 });
-//   const userSnapshot = await getDocs(usersCol);
-
-//   userSnapshot.docs.map((doc) => console.log(doc.data()));
-// };
+export const addCar = async (id) => {
+  const favsCollection = collection(db, "favs");
+  addDoc(favsCollection, { id });
+};

@@ -23,7 +23,7 @@ const CarsSection = () => {
         {Cars.length === 0
           ? ""
           : Cars.map((car) => (
-              <BookingCard carID={1} scar={car} key={0}></BookingCard>
+              <BookingCard car={car} key={car.carId}></BookingCard>
             ))}
       </div>{" "}
     </div>

@@ -1,6 +1,13 @@
 import { initializeApp } from "firebase/app";
-import { getFirestore, collection, addDoc, getDocs } from "firebase/firestore";
-
+import {
+  getFirestore,
+  collection,
+  addDoc,
+  getDocs,
+  updateDoc,
+  doc,
+} from "firebase/firestore";
+import { useDispatch } from "react-redux";
 const firebaseConfig = {
   apiKey: "AIzaSyB1rqgLZ5bLV1-WPVDcCtHcLnSmhzV-PxY",
   authDomain: "car-dashboard-d6648.firebaseapp.com",
@@ -26,6 +33,7 @@ const Cars = [
     type: "Manual",
     imageUrl:
       "https://firebasestorage.googleapis.com/v0/b/car-dashboard-d6648.appspot.com/o/cars%2Fbooking-car-1.svg?alt=media&token=3b665cc8-8279-4b44-93de-e08a22284649",
+    isLiked: 0,
   },
 
   {
@@ -35,6 +43,7 @@ const Cars = [
     type: "Automatic",
     imageUrl:
       "https://firebasestorage.googleapis.com/v0/b/car-dashboard-d6648.appspot.com/o/cars%2Fbooking-car-2.svg?alt=media&token=6dbcf5f4-38c4-41af-9783-e5cec9c95147",
+    isLiked: 0,
   },
   {
     carName: "Porshe 718 Cayman S",
@@ -43,6 +52,7 @@ const Cars = [
     type: "Manual",
     imageUrl:
       "https://firebasestorage.googleapis.com/v0/b/car-dashboard-d6648.appspot.com/o/cars%2Fbooking-car-3.svg?alt=media&token=07631824-860c-4d72-b29c-b9683ff5c694",
+    isLiked: 0,
   },
   {
     carName: "Porshe 718 Cayman S",
@@ -51,6 +61,7 @@ const Cars = [
     type: "Automatic",
     imageUrl:
       "https://firebasestorage.googleapis.com/v0/b/car-dashboard-d6648.appspot.com/o/cars%2Fbooking-car-4.svg?alt=media&token=228195cd-ca1a-49e4-995e-fc5225464399",
+    isLiked: 0,
   },
   {
     carName: "Porshe 718 Cayman S",
@@ -59,6 +70,7 @@ const Cars = [
     type: "Manual",
     imageUrl:
       "https://firebasestorage.googleapis.com/v0/b/car-dashboard-d6648.appspot.com/o/cars%2Fbooking-car-5.svg?alt=media&token=ef716f61-aaa8-41ee-a492-ad8bf8294ec9",
+    isLiked: 0,
   },
 ];
 
@@ -78,7 +90,18 @@ export const fetchCars = async () => {
   return Cars;
 };
 
-export const addCar = async (id) => {
-  const favsCollection = collection(db, "favs");
-  addDoc(favsCollection, { id });
+export const likeCar = async (id) => {
+  const docRef = doc(db, "cars", id);
+  updateDoc(docRef, { isLiked: 1 }).then(() => console.log("Yesss"));
 };
+
+export const disLikeCar = async (id) => {
+  const docRef = doc(db, "cars", id);
+  updateDoc(docRef, { isLiked: 0 }).then(() => console.log("Yesss"));
+};
+
+// export const addCar = async (id) => {
+//   const favsCollection = collection(db, "favs");
+
+//   setDoc(favsCollection, { id });
+// };

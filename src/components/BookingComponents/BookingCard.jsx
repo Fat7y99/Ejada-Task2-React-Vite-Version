@@ -1,9 +1,7 @@
 import icon1 from "../../assets/imgs/booking-icon-1.svg";
 import icon2 from "../../assets/imgs/booking-icon-2.svg";
-import { likeCar } from "../../services/FireBase";
-import { useSelector, useDispatch } from "react-redux";
-import { like } from "../../redux/favCounter";
-import { updateCars } from "../../redux/cars";
+import { useDispatch } from "react-redux";
+import { like, updateCars } from "../../redux/cars";
 import { fetchCars } from "../../services/FireBase";
 const BookingCard = (props) => {
   const Car = props.car;
@@ -11,8 +9,11 @@ const BookingCard = (props) => {
   const dispatch = useDispatch();
 
   const onClickHandler = async (event) => {
+    console.log("Booking Card Hello");
     console.log(event.currentTarget.id);
+
     dispatch(like(event.currentTarget.id));
+
     const Cars = await fetchCars();
     dispatch(updateCars(Cars));
   };

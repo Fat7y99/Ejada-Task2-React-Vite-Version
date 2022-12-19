@@ -3,6 +3,7 @@ import FiltrationSction from "../../components/BookingComponents/FiltrationSecti
 import CarsSection from "../../components/BookingComponents/CarsSection";
 const BookingPage = () => {
   console.log("Booking Page");
+
   return (
     <div id="Booking-content" className="container-fluid">
       <div className="Booking-title">Booking</div>

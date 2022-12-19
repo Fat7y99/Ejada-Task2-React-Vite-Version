@@ -4,8 +4,10 @@ import SearchIcon from "../../assets/imgs/search icon.svg";
 import Notification from "../../assets/imgs/notification.svg";
 import Rect from "../../assets/imgs/rect.svg";
 import { useSelector } from "react-redux";
-const HeaderSection = (props) => {
-  const favCount = useSelector((state) => state.favCounter.value);
+const HeaderSection = () => {
+  const favCount = useSelector((state) => state.cars.data).filter(
+    (car) => car.isLiked === 1
+  );
 
   return (
     <div className="search-header profile-header position-relative py-4">
@@ -21,7 +23,7 @@ const HeaderSection = (props) => {
         />
       </div>
       <div className="profile-avatar d-inline">
-        <div className="d-inline">{favCount}</div>
+        <div className="d-inline">{favCount.length}</div>
         <a href="#">
           <img className="px-3" src={Notification} alt="notification" />
         </a>

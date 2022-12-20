@@ -11,7 +11,6 @@ const HeaderSection = () => {
   );
   const dispatch = useDispatch();
   const onChangeHandler = (event) => {
-    // console.log("hena header section", event.target.value);
     dispatch(search(event.target.value));
   };
   return (

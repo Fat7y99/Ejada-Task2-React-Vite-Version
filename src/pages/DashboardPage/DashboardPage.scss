@@ -112,7 +112,7 @@
   color: white;
   font-weight: 700;
   position: relative;
-  top: 90px;
+  top: 80px;
   /* height: 100px; */
   /* background-color: red; */
 }
@@ -162,5 +162,10 @@
 @media screen and (max-width: 991px) {
   .chart-card {
     padding: 1rem;
+  }
+  .percentage {
+    top: 150px;
+    /* height: 100px; */
+    /* background-color: red; */
   }
 }

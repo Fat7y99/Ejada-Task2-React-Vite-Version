@@ -3,8 +3,8 @@ import BookingCard from "./BookingCard";
 import { useSelector } from "react-redux";
 const CarsSection = () => {
   const Cars = useSelector((state) => {
-    console.log("carsection", state.cars.data);
-    return state.cars.data;
+    // console.log("carsection", state.cars.data);
+    return state.cars.filteredData;
   });
 
   return (

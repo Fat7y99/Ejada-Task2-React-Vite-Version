@@ -3,12 +3,17 @@ import Avatar from "../../assets/imgs/avatar.png";
 import SearchIcon from "../../assets/imgs/search icon.svg";
 import Notification from "../../assets/imgs/notification.svg";
 import Rect from "../../assets/imgs/rect.svg";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { search } from "../../redux/cars";
 const HeaderSection = () => {
   const favCount = useSelector((state) => state.cars.data).filter(
     (car) => car.isLiked === 1
   );
-
+  const dispatch = useDispatch();
+  const onChangeHandler = (event) => {
+    // console.log("hena header section", event.target.value);
+    dispatch(search(event.target.value));
+  };
   return (
     <div className="search-header profile-header position-relative py-4">
       <div className="search-bar px-2 d-inline-block">
@@ -19,6 +24,7 @@ const HeaderSection = () => {
         <input
           className="search-text px-2"
           type="text"
+          onChange={onChangeHandler}
           placeholder="Search or type"
         />
       </div>

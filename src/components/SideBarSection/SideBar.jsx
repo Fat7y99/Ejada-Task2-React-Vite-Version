@@ -38,7 +38,7 @@ const SideBar = (props) => {
   };
 
   const isMobile = useMediaQuery({ query: "(max-width: 576px)" });
-  console.log("isMobile?", isMobile);
+  // console.log("isMobile?", isMobile);
   const onIconClickHadler = () => {
     SetClick(!isClicked);
   };

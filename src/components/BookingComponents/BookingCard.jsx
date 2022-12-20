@@ -1,21 +1,24 @@
 import icon1 from "../../assets/imgs/booking-icon-1.svg";
 import icon2 from "../../assets/imgs/booking-icon-2.svg";
-import { useDispatch } from "react-redux";
-import { like, updateCars } from "../../redux/cars";
+import { useDispatch, useSelector } from "react-redux";
+import { like, updateCars, search } from "../../redux/cars";
 import { fetchCars } from "../../services/FireBase";
 const BookingCard = (props) => {
   const Car = props.car;
 
   const dispatch = useDispatch();
+  const searchQuery = useSelector((state) => state.cars.searchQuery);
 
   const onClickHandler = async (event) => {
-    console.log("Booking Card Hello");
-    console.log(event.currentTarget.id);
+    // console.log("Booking Card Hello");
+    // console.log(event.currentTarget.id);
 
     dispatch(like(event.currentTarget.id));
 
     const Cars = await fetchCars();
     dispatch(updateCars(Cars));
+    // console.log("searchQuery", searchQuery);
+    dispatch(search(searchQuery));
   };
   return (
     <div className="col-lg-4">
@@ -23,7 +26,7 @@ const BookingCard = (props) => {
         <div className="card py-2 px-3" color="#E1DFA4">
           <div className="container my-4">
             <div className="s position-relative">
-              <div className="card-text d-inline-block">{Car.carId} </div>
+              <div className="card-text d-inline-block">{Car.carName} </div>
               <div className="love-icon">
                 {/* <img src="imgs/love-0.svg" alt="love-0" /> */}
                 {Car.isLiked === 0 ? (
